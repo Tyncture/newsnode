@@ -1,17 +1,9 @@
-import { getDescendants } from "./comment";
-import { getItem } from "./item";
-import { HNComment, HNStory } from "./types";
+import { getPost } from "./post";
+import { HNStory } from "./types";
 
 export async function getStory(id: number): Promise<HNStory> {
-  const item = (await getItem(id)) as HNStory;
+  const post = (await getPost(id)) as HNStory;
   return {
-    ...item,
-    // Coerce types
-    descendants: Number(item.descendants),
-    kids: item.kids ? item.kids.map(cid => Number(cid)) : [],
-    title: item.title,
-    score: Number(item.score),
-    getDescendants: (): Promise<HNComment[]> =>
-      item.kids ? getDescendants(item.kids) : Promise.resolve([]),
+    ...post,
   };
 }
