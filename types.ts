@@ -69,7 +69,7 @@ export interface HNPollOption extends HNItem {
   /* Item text */
   text: string;
   /* Get the parent HNPoll */
-  getPoll: () => HNPoll; 
+  getPoll: () => Promise<HNPoll>; 
 }
 
 export interface HNUser {
