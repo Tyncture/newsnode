@@ -21,7 +21,7 @@ export interface HNPost extends HNItem {
   /* Nymber of comments */
   descendants: number;
   /* IDs of top-level comments */
-  kids?: number[];
+  kids: number[];
   /* Item title */
   title: string;
   /* Get the comments */
@@ -56,7 +56,7 @@ export interface HNComment extends HNItem {
   /* Parent comment, if applicable */
   parent?: number;
   /* IDs of subcomments */
-  kids?: number[];
+  kids: number[];
   /* Item text */
   text: string;
   /* Get the subcomments */
