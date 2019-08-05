@@ -2,7 +2,7 @@ import HNApi from "./api";
 import { HNItem } from "./types";
 
 export async function getItem(id: number): Promise<HNItem> {
-  const data = await HNApi.getPath(`/item/${id}`);
+  const data = await HNApi.getPath(`/item/${id}.json`);
   return {
     // Let callers have the other properties too
     ...data,
