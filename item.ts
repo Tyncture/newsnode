@@ -10,7 +10,7 @@ export async function getItem(id: number): Promise<HNItem> {
     id: Number(data.id),
     by: data.by,
     score: Number(data.score),
-    time: new Date(data.time),
+    time: new Date(data.time * 1000),
     type: data.type,
     dead: Boolean(data.dead),
     deleted: Boolean(data.deleted),
