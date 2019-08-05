@@ -9,7 +9,6 @@ export async function getItem(id: number): Promise<HNItem> {
     // Coerce types
     id: Number(data.id),
     by: data.by,
-    score: Number(data.score),
     time: new Date(data.time * 1000),
     type: data.type,
     dead: Boolean(data.dead),

@@ -3,8 +3,6 @@ export interface HNItem {
   id: number;
   /* Username of user who submitted the item */
   by: string;
-  /* Karma/score count */
-  score: number;
   /* Date object representing time of submission */
   time: Date;
   /* Type of "job", "story", "comment", "poll", or "pollopt" */
@@ -24,6 +22,8 @@ export interface HNPost extends HNItem {
   kids: number[];
   /* Item title */
   title: string;
+  /* Karma/score count */
+  score: number;
   /* Get the comments */
   getDescendants: () => Promise<HNComment[]>;
 }

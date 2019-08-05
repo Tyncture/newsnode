@@ -10,6 +10,7 @@ export async function getStory(id: number): Promise<HNStory> {
     descendants: Number(item.descendants),
     kids: item.kids ? item.kids.map(cid => Number(cid)) : [],
     title: item.title,
+    score: Number(item.score),
     getDescendants: (): Promise<HNComment[]> =>
       item.kids ? getDescendants(item.kids) : Promise.resolve([]),
   };
