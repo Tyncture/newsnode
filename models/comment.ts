@@ -25,7 +25,6 @@ function coerceComment(item: HNItem): HNComment {
     descendants: comment.kids ? comment.kids.reduce(prev => prev + 1, 0) : 0,
     parent: comment.parent ? Number(comment.parent) : undefined,
     kids: descendants,
-    getDescendants: () =>
-      descendants.length > 0 ? getDescendants(descendants) : Promise.resolve([]),
+    getDescendants: () => getDescendants(descendants),
   };
 }
