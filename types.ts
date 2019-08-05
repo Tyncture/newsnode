@@ -13,17 +13,19 @@ export interface HNItem {
   dead: boolean;
   /* Whether the item is deleted */
   deleted: boolean;
+  /* Remaining properties */
+  [k: string]: any;
 }
 
 export interface HNPost extends HNItem {
   /* Nymber of comments */
   descendants: number;
   /* IDs of top-level comments */
-  kids: number[];
+  kids?: number[];
   /* Item title */
   title: string;
   /* Get the comments */
-  getDescendants: () => HNComment;
+  getDescendants: () => Promise<HNComment[]>;
 }
 
 export interface HNStory extends HNPost {
@@ -54,11 +56,11 @@ export interface HNComment extends HNItem {
   /* Parent comment, if applicable */
   parent?: number;
   /* IDs of subcomments */
-  kids: number[];
+  kids?: number[];
   /* Item text */
   text: string;
   /* Get the subcomments */
-  getDescendants: () => HNComment;
+  getDescendants: () => Promise<HNComment[]>;
 }
 
 export interface HNPollOption extends HNItem {
