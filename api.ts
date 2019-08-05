@@ -20,11 +20,14 @@ async function requestPath(
   // Error handling is delegated to the implementor
 }
 
-async function getPath(path: string) {
+async function getPath(path: string): Promise<{ [k: string]: any }> {
   return await requestPath(path, "GET");
 }
 
-async function postPath(path: string, body?: {}) {
+async function postPath(
+  path: string,
+  body?: {},
+): Promise<{ [k: string]: any }> {
   return await requestPath(path, "POST", body);
 }
 
