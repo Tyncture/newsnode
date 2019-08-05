@@ -15,6 +15,6 @@ export async function getPollOption(id: number): Promise<HNPollOption> {
     ...option,
     /// Coerce types
     poll: Number(option.poll),
-    getPoll: () => getPoll(Number(option.poll))
+    getPoll: (): Promise<HNPoll> => getPoll(Number(option.poll))
   };
 }
