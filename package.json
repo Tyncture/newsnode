@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/Tyncture/newsnode/issues"
   },
-  "homepage": "https://github.com/Tyncture/newsnode#readme"
+  "homepage": "https://github.com/Tyncture/newsnode#readme",
+  "devDependencies": {
+    "babel-plugin-syntax-trailing-function-commas": "^6.22.0",
+    "prettier": "^1.18.2",
+    "tslint": "^5.18.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  }
 }
