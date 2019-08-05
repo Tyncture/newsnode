@@ -18,10 +18,18 @@ async function requestPath(path: string, method: "GET" | "POST", body?: {}) {
   }
 }
 
-export async function getPath(path: string) {
+async function getPath(path: string) {
   return await requestPath(path, "GET");
 }
 
-export async function postPath(path: string, body?: {}) {
+async function postPath(path: string, body?: {}) {
   return await requestPath(path, "POST", body);
 }
+
+const HNApi = {
+  requestPath,
+  getPath,
+  postPath,
+}
+
+export default HNApi;
