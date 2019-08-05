@@ -18,14 +18,14 @@ export async function getDescendants(
 
 function coerceComment(item: HNItem): HNComment {
   const comment = item as HNComment;
+  const descendants = comment.kids ? comment.kids.map(cid => Number(cid)) : [];
   return {
     ...comment,
     /// Coerce types
     descendants: comment.kids ? comment.kids.reduce(prev => prev + 1, 0) : 0,
     parent: comment.parent ? Number(comment.parent) : undefined,
-    kids: comment.kids ? comment.kids.map(cid => Number(cid)) : [],
-    text: comment.text,
+    kids: descendants,
     getDescendants: () =>
-      comment.kids ? getDescendants(comment.kids) : Promise.resolve([]),
+      descendants.length > 0 ? getDescendants(descendants) : Promise.resolve([]),
   };
 }
