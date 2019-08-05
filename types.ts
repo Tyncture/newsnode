@@ -1,4 +1,4 @@
-interface HNItem {
+export interface HNItem {
   /* Unique numerical ID */
   id: number;
   /* Username of user who submitted the item */
@@ -15,7 +15,7 @@ interface HNItem {
   deleted: boolean;
 }
 
-interface HNPost extends HNItem {
+export interface HNPost extends HNItem {
   /* Nymber of comments */
   descendants: number;
   /* IDs of top-level comments */
@@ -26,29 +26,29 @@ interface HNPost extends HNItem {
   getDescendants: () => HNComment;
 }
 
-interface HNStory extends HNPost {
+export interface HNStory extends HNPost {
   /* URL submitted with this item */
   url: string;
 }
 
-interface HNAsk extends HNPost {
+export interface HNAsk extends HNPost {
   /* Item text */
   text: string;
 }
 
-interface HNPoll extends HNPost {
+export interface HNPoll extends HNPost {
   /* Item text */
   text: string;
 }
 
-interface HNJob extends HNPost {
+export interface HNJob extends HNPost {
   /* Item text */
   text: string;
   /* URL submitted with this item */
   url: string;
 }
 
-interface HNComment extends HNItem {
+export interface HNComment extends HNItem {
   /* Nymber of subcomments */
   descendants: number;
   /* Parent comment, if applicable */
@@ -61,7 +61,7 @@ interface HNComment extends HNItem {
   getDescendants: () => HNComment;
 }
 
-interface HNPollOption extends HNItem {
+export interface HNPollOption extends HNItem {
   /* Poll ID */
   poll: number;
   /* Item text */
@@ -70,7 +70,7 @@ interface HNPollOption extends HNItem {
   getPoll: () => HNPoll; 
 }
 
-interface HNUser {
+export interface HNUser {
   /* User's case sensitive name*/
   id: string;
   /* Delay between user's submissions and site visibility */
