@@ -1,5 +1,8 @@
-function test() {
-  console.log("Testing ground ran.")
+import models from "./models";
+
+
+const NewsNode = {
+  ...models
 }
 
-test();
+export default NewsNode;
