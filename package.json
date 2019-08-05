@@ -1,0 +1,22 @@
+{
+  "name": "newsnode",
+  "version": "1.0.0",
+  "description": "Object mapped Node.js wrapper library for the official Hacker News API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyncture/newsnode.git"
+  },
+  "keywords": [
+    "hackernews"
+  ],
+  "author": "John Su",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tyncture/newsnode/issues"
+  },
+  "homepage": "https://github.com/Tyncture/newsnode#readme"
+}
