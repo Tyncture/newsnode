@@ -2,7 +2,11 @@ import Axios from "axios";
 
 const API_URL = "https://hacker-news.firebaseio.com/v0";
 
-async function requestPath(path: string, method: "GET" | "POST", body?: {}): Promise<{}> {
+async function requestPath(
+  path: string,
+  method: "GET" | "POST" | "PUT" | "PATCH",
+  body?: {},
+): Promise<{ [k: string]: any }> {
   const response = await Axios.request({
     method,
     headers: {
@@ -28,6 +32,6 @@ const HNApi = {
   requestPath,
   getPath,
   postPath,
-}
+};
 
 export default HNApi;
