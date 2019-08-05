@@ -1,7 +1,6 @@
-import { getDescendants } from "./comment";
+import { HNPoll, HNPollOption } from "../types";
 import { getItem } from "./item";
 import { getPost } from "./post";
-import { HNPoll, HNPollOption } from "./types";
 
 export async function getPoll(id: number): Promise<HNPoll> {
   const post = (await getPost(id)) as HNPoll;

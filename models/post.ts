@@ -1,6 +1,6 @@
+import { HNComment, HNPost } from "../types";
 import { getDescendants } from "./comment";
 import { getItem } from "./item";
-import { HNComment, HNPost } from "./types";
 
 export async function getPost(id: number): Promise<HNPost> {
   const item = (await getItem(id)) as HNPost;

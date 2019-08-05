@@ -1,5 +1,5 @@
+import { HNComment, HNItem } from "../types";
 import { getItem } from "./item";
-import { HNComment, HNItem } from "./types";
 
 export async function getComment(id: number): Promise<HNComment> {
   const item = await getItem(id);
