@@ -2,7 +2,7 @@ import Axios from "axios";
 
 const API_URL = "https://hacker-news.firebaseio.com/v0";
 
-async function requestPath(path: string, method: "GET" | "POST", body?: {}) {
+async function requestPath(path: string, method: "GET" | "POST", body?: {}): Promise<{}> {
   try {
     const response = await Axios.request({
       method,
