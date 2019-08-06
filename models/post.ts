@@ -7,7 +7,11 @@ export async function getPost(id: number): Promise<HNPost> {
   return {
     ...item,
     // Coerce types
-    descendants: Number(item.descendants),
+    descendants: item.descendants
+      ? Number(item.descendants)
+      : Array.isArray(item.kids)
+      ? item.kids.reduce(prev => prev + 1, 0)
+      : 0,
     kids: item.kids ? item.kids.map(cid => Number(cid)) : [],
     score: Number(item.score),
     getDescendants: (): Promise<HNComment[]> =>
