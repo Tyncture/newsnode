@@ -33,7 +33,7 @@ returned.
 
 ### Retreiving feed data
 All methods below return an array of objects with the shape of the item type they're 
-representing. You can find more by referring to [types.ts](types.ts) and 
+representing. You can find more by referring to [types.ts](src/types.ts) and 
 the official [API docs](https://github.com/HackerNews/API).
 
 ```js
