@@ -2,16 +2,16 @@
   "name": "newsnode",
   "version": "1.0.0",
   "description": "Object mapped Node.js wrapper library for the official Hacker News API",
-  "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn  --no-notify ./src"
+    "dev": "ts-node-dev --respawn  --no-notify ./src",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tyncture/newsnode.git"
   },
   "keywords": [
-    "hackernews"
+    "hackernews", "hacker news", "wrapper", "client"
   ],
   "author": "John Su",
   "license": "MIT",
@@ -28,5 +28,8 @@
   },
   "dependencies": {
     "axios": "^0.19.0"
-  }
+  },
+  "files": ["lib/**/*"],
+  "main": "lib/index.js",
+  "types": "lib/index.d.js"
 }
