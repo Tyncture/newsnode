@@ -4,7 +4,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/Tyncture/newsnode.svg?&style=flat-square)
 
 A client library/wrapper around the Hacker News API written for
-Node.js, with JavaScript object mappings and TypeScript definitions. 
+Node.js with object mappings and TypeScript definitions. 
 It should support anything that runs on the Node.js platform.
 
 Bindings and models are designed to be as close as possible to the 
@@ -32,10 +32,8 @@ use either `Promise.then()` or `async` and `await` to wait for the response to b
 returned.
 
 ### Retreiving feed data
-All functions for dealing with the feeds can be found under the `feeds` property.
-
 All methods below return an array of objects with the shape of the item type they're 
-representing. You can find more by referring to [types.ts](types.ts) and 
+representing. You can find more by referring to [types.ts](src/types.ts) and 
 the official [API docs](https://github.com/HackerNews/API).
 
 ```js
@@ -81,6 +79,9 @@ NewsNode.items.getComment(20619715)
 // Get comment responses
 const story = await NewsNode.items.getStory(20619715);
 const comments = await story.getDescendants();
+// You can get subcomments by calling getDescendants() on comments[0..n], 
+// which are elements of type HNComment, and therefore also implement the 
+// getDescendants() method
 ```
 
 ### Error handling
