@@ -32,8 +32,6 @@ use either `Promise.then()` or `async` and `await` to wait for the response to b
 returned.
 
 ### Retreiving feed data
-All functions for dealing with the feeds can be found under the `feeds` property.
-
 All methods below return an array of objects with the shape of the item type they're 
 representing. You can find more by referring to [types.ts](types.ts) and 
 the official [API docs](https://github.com/HackerNews/API).
