@@ -22,7 +22,7 @@ npm install newsnode --save
 And then import the module into your project like so.
 ```js
 // With ES2015/ES6
-import { NewsNode } from "newsnode";
+import NewsNode from "newsnode";
 // With CommonJS
 const NewsNode = require("newsnode");
 ```
