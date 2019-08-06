@@ -1,5 +1,5 @@
-import { HNJob } from "../types";
-import { getFeed } from "./feed";
+import { HNJob } from "../../types";
+import { getFeed } from "../feed";
 
 export async function getJobStories(
   limit: number = 100,

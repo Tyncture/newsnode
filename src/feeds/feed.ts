@@ -1,5 +1,5 @@
 import HNApi from "../api";
-import { getPost } from "../models/post";
+import { getPost } from "../items/post";
 import { HNPost } from "../types";
 
 export async function getFeed(

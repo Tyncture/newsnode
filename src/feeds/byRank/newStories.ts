@@ -1,5 +1,5 @@
-import { HNStory } from "../types";
-import { getFeed } from "./feed";
+import { HNStory } from "../../types";
+import { getFeed } from "../feed";
 
 export async function getNewStories(
   limit: number = 100,

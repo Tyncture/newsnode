@@ -1,5 +1,5 @@
-import { HNAsk } from "../types";
-import { getFeed } from "./feed";
+import { HNAsk } from "../../types";
+import { getFeed } from "../feed";
 
 export async function getAskStories(
   limit: number = 100,
