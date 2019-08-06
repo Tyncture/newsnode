@@ -1,9 +1,9 @@
-import { HNStory } from "../types";
+import { HNJob } from "../types";
 import { getFeed } from "./feed";
 
-export async function getShowStories(
+export async function getJobStories(
   limit: number = 100,
   afterId: number = 0,
-): Promise<HNStory[]> {
-  return (await getFeed("jobstories", limit, afterId)) as HNStory[];
+): Promise<HNJob[]> {
+  return (await getFeed("jobstories", limit, afterId)) as HNJob[];
 }
