@@ -79,6 +79,7 @@ NewsNode.items.getComment(20619715)
 // Get comment responses
 const story = await NewsNode.items.getStory(20619715);
 const comments = await story.getDescendants();
+// You can then keep calling getDescendants() on comments[0..n] to get subcomments
 ```
 
 ### Error handling
