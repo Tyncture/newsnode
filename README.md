@@ -4,7 +4,7 @@
 ![Top Language](https://img.shields.io/github/languages/top/Tyncture/newsnode.svg?&style=flat-square)
 
 A client library/wrapper around the Hacker News API written for
-Node.js, with JavaScript object mappings and TypeScript definitions. 
+Node.js with object mappings and TypeScript definitions. 
 It should support anything that runs on the Node.js platform.
 
 Bindings and models are designed to be as close as possible to the 
