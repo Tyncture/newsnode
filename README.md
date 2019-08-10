@@ -2,6 +2,7 @@
 ![Repository Size](https://img.shields.io/github/repo-size/Tyncture/newsnode.svg?t&style=flat-square)
 ![License](https://img.shields.io/github/license/Tyncture/newsnode.svg?&style=flat-square)
 ![Top Language](https://img.shields.io/github/languages/top/Tyncture/newsnode.svg?&style=flat-square)
+[![npm version](https://badge.fury.io/js/newsnode.svg)](https://badge.fury.io/js/newsnode)
 
 A client library/wrapper around the Hacker News API written for
 Node.js with object mappings and TypeScript definitions. 
