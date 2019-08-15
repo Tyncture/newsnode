@@ -1,6 +1,6 @@
 {
   "name": "newsnode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Client library/wrapper around the Hacker News API for Node.js with object mappings and TS definitions.",
   "scripts": {
     "dev": "ts-node-dev --respawn  --no-notify ./src",
